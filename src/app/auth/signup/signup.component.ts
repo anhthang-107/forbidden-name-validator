@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]>;
+  enteredValue: string;
 
   constructor() {
     this.myControl.setValidators(forbiddenNamesValidator(this.options));
